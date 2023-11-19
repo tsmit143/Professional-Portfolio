@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+/*Color Schemes - to call: xxx: var (--color);*/
+:root {
+    --pink: #fbe3e8;
+    --teal: #5cbdb9;
+    --light-pink: #ebf6f5;
+  }
+
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    background: var(--pink);
+  }
+
+  main {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    flex-wrap: wrap;
+    background: var(--light-pink);
+  }
+  /*Page Breakdowns*/
+  .main-header {
+   /* display: flex;*/
+    background: var(--light-pink);
+   color: black;
+   justify-content: space-between;
+   border: #5cbdb9 solid;
+  }
+  .float-left{
+    float:left;
+    margin-right: 25px;
+  }
+  .header img {
+    height: 20px;
+    width: 20px;
+  }
+/*Page Contents*/
+.content {
+    width:75%
+    display: inline-block;
+    margin-left:20%;
+}
+  /*Responsive Web Design*/
