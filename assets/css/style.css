@@ -227,8 +227,9 @@ color: var(--teal);
         flex-direction:row;
         background-color: var(--teal);
         position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
+        top: 0px; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */
+        z-index: 1; /*nav on top of images when scrolling*/
     }
     .nav ul li a {
         float: left;
@@ -241,6 +242,17 @@ color: var(--teal);
     }
     .nav ul li a:hover {
         background-color: gray;
+    }
+
+    /*adjust work containers with smaller screen*/
+    .section ul { /*work link will stack with smaller screen*/
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .section ul li img {
+        max-width: 400px;
+        height: auto;
     }
   }
   /*changes hero picture with larger screen*/
