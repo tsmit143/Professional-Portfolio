@@ -20,7 +20,7 @@
     flex-direction: column; /*responsive*/
     background-image: /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
    url("../images/headshot.png");
-    height: 75%;
+    /*height: 75%;*/
       /* Position and center the image to scale nicely on all screens */
       height: 100vh;/*responsive*/
       align-self: center;/*responsive*/
@@ -109,9 +109,9 @@
 
 
 }
-.nav ul li {
+/*.nav ul li {
 
-}
+}*/
 .nav ul li a{
     float: left;
     display: block;
@@ -122,13 +122,13 @@
     font-size: 17px;
 }
 /*change color when nav option is hovered over*/
-.nav ul li a:hover {
+/*.nav ul li a:hover {
   
-}
+}*/
 /* Add a color to the active/current link */
-.nav ul li a.active {
+/*.nav ul li a.active {
  
-  }
+  }*/
 
 /* Main content */
 .main {
@@ -169,6 +169,24 @@ color: var(--teal);
     /*border: var(--teal) solid;*/
   
 }
+.container {
+    position: relative;
+    text-align: center;
+    color: var(--teal);
+    box-shadow: 10px 10px 5px var(--teal);
+}
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 2px;
+    background-color: var(--light);
+    padding: 16px;
+    font-weight: bolder;
+    text-align: center;
+    outline: var(--teal) solid;
+    font-style: italic;
+  }
 /*section header style*/
 .section header {
     padding: 20px;
@@ -212,7 +230,7 @@ color: var(--teal);
         top: 0; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */
     }
-    .nav ul li a{
+    .nav ul li a {
         float: left;
         display: block;
         color: var(--pink);
@@ -222,6 +240,27 @@ color: var(--teal);
         font-size: 17px;
     }
     .nav ul li a:hover {
-background-color: gray;
+        background-color: gray;
     }
   }
+  /*changes hero picture with larger screen*/
+  @media screen and (min-width: 992px) /*and (max-width : 1200px)*/{
+    .heroImage {
+        display: flex;/*responsive*/
+        flex-direction: column; /*responsive*/
+        background-image: /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
+       url("../images/standing.JPG");
+        /*height: 75%;*/
+          /* Position and center the image to scale nicely on all screens */
+          height: 100vh;/*responsive*/
+          align-self: center;/*responsive*/
+     /* background-position: center;*/ /*original*/
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
+      /*position: relative;*/
+      }
+    }
+
