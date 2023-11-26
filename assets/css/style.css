@@ -16,15 +16,21 @@
 }
   /*hero header*/
   .heroImage {
+    display: flex;/*responsive*/
+    flex-direction: column; /*responsive*/
     background-image: /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
-
    url("../images/headshot.png");
     height: 75%;
       /* Position and center the image to scale nicely on all screens */
-  background-position: center;
+      height: 100vh;/*responsive*/
+      align-self: center;/*responsive*/
+ /* background-position: center;*/ /*original*/
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+  /*position: relative;*/
   }
   /*hero header text*/
   .heroText {
@@ -196,3 +202,26 @@ color: var(--teal);
   }
 
 /*add responsive coding*/
+/*nav style change for smaller screen/fixed*/
+@media screen and (max-width: 600px) {
+    .nav {
+        display: flex;
+        flex-direction:row;
+        background-color: var(--teal);
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+    }
+    .nav ul li a{
+        float: left;
+        display: block;
+        color: var(--pink);
+        text-align: center;
+        padding: 16px;
+        font-weight: bolder;
+        font-size: 17px;
+    }
+    .nav ul li a:hover {
+background-color: gray;
+    }
+  }
